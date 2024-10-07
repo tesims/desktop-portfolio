@@ -1,0 +1,556 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('background1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  /* Desktop Styles */
+  #desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    height: calc(100vh - 40px);
+    overflow: hidden;
+  }
+  
+  .icon-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 40px;
+  }
+  
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+    width: 100px;
+  }
+  
+  .icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .icon span {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  .window {
+    position: absolute;
+    width: 600px;
+    background: #c0c0c0;
+    border: 2px solid #000;
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+  }
+  
+  .window-header {
+    background: #000080;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+  }
+  
+  .window-content {
+    padding: 10px;
+    background: white;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 80vh;
+  }
+  
+  .scrollable-content {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-right: 10px;
+  }
+  /* Browser Window Styles */
+  .browser-window {
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .browser-header {
+    background: #f0f0f0;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .browser-header button {
+    background: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .browser-content {
+    padding: 10px;
+    background: white;
+  }
+  
+  .project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  .project img {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+  }
+  
+  .project h3 {
+    margin: 0;
+  }
+  
+  .project p {
+    margin: 5px 0 0 0;
+  }
+  
+  #clippy {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  #clippy img {
+    width: 100px;
+  }
+  
+  #clippy-dialog {
+    background: #ffffe0;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  /* Taskbar Styles */
+  #taskbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: #c0c0c0;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #000;
+  }
+  
+  #start-button {
+    width: 80px;
+    height: 100%;
+    background: #000080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  #start-button img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  #taskbar-windows {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+  }
+  
+  .taskbar-tab {
+    background: #808080;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .taskbar-tab:hover {
+    background: #a0a0a0;
+  }
+  
+  .taskbar-tab img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  
+  #taskbar-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .taskbar-icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .taskbar-icon img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #taskbar-clock {
+    width: 80px;
+    text-align: center;
+    color: black;
+  }
+  
+  /* Start Menu Styles */
+  #start-menu {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    width: 200px;
+    background: #c0c0c0;
+    border: 2px solid #000;
+    display: none;
+  }
+  
+  #start-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #start-menu li:hover {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #start-menu li:hover {
+    background: #808080;
+    color: white;
+  }
+  
+  /* Mobile Styles */
+  #mobile {
+    display: none;
+  }
+  
+  nav {
+    background: #0078d7;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  nav li {
+    cursor: pointer;
+  }
+  
+  #mobileContent {
+    padding: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #desktop, #taskbar, #clippy, #start-menu {
+      display: none;
+    }
+    #mobile {
+      display: block;
+    }
+  }
+
+/* File Explorer Styles */
+.file-explorer {
+  display: flex;
+  flex-direction: column;
+}
+
+.folder {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.folder img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.files {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.file img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 5px;
+}
+
+.file span {
+  text-align: center;
+}
+
+/* CV Styles */
+
+
+.file-explorer {
+  display: flex;
+  height: 100%;
+}
+
+.file-list {
+  flex: 2;
+  background-color: white;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.file-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.file-item:hover {
+  background-color: #e0e0e0;
+}
+
+.file-item img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 5px;
+}
+
+.project-details {
+  flex: 1;
+  background-color: #f0f0f0;
+  border-left: 1px solid #ccc;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-details h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.project-details p {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.project-details a {
+  margin-top: auto;
+  font-size: 0.9em;
+}
+
+#projectsWindow {
+  width: 80%;
+  height: 80%;
+  max-width: 1200px;
+  max-height: 800px;
+}
+
+#projectsWindow .window-content {
+  height: calc(100% - 30px); /* Adjust based on your window header height */
+}
+/* CV Window Styles */
+.wide-window {
+  width: 80% !important;
+  max-width: 1200px !important;
+}
+
+.cv-content {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.cv-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cv-content h1 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.cv-content h2 {
+  color: #2980b9;
+  border-bottom: 1px solid #bdc3c7;
+  padding-bottom: 5px;
+  margin-top: 0;
+  font-size: 1.8em;
+}
+
+.cv-content h3 {
+  color: #34495e;
+  margin-bottom: 5px;
+  font-size: 1.4em;
+}
+
+.cv-content p {
+  margin: 5px 0;
+}
+
+.cv-content ul {
+  padding-left: 20px;
+}
+
+.cv-content .job, .cv-content .education-item, .cv-content .leadership-item {
+  margin-bottom: 15px;
+}
+
+.cv-content .job-title, .cv-content .job-duration, .cv-content .location {
+  font-style: italic;
+  color: #7f8c8d;
+}
+.cv-content .school-date {
+  float: right;
+}
+
+
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.window-header span {
+  flex-grow: 1;
+}
+
+#download-cv {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+#download-cv img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 600px) {
+  .window-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #download-cv {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
+
+#musicWindow .window-content {
+  overflow: hidden;
+  background-color: #000;
+}
+
+#audioCanvas {
+  width: 100%;
+  height: calc(100% - 50px);
+}
+
+#audioControls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+#audioControls .bt {
+  margin-right: 10px;
+}
+
+#musicWindow .window-content {
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+#audioCanvas {
+  flex-grow: 1;
+}
+
+#audioControls {
+  padding: 10px;
+}
+
+#txtStatus {
+  color: white;
+  padding: 10px;
+}

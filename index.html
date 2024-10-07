@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meeting Anna</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Desktop Interface -->
+  <div id="desktop">
+    <div class="icon-column">
+      <div class="icon" onclick="openWindow('aboutWindow')">
+        <img src="icons/about.png" alt="About Me">
+        <span>About Me</span>
+      </div>
+      <div class="icon" onclick="openWindow('cvWindow')">
+        <img src="icons/cv.png" alt="CV">
+        <span>My CV</span>
+      </div>
+      <div class="icon" onclick="openWindow('projectsWindow')">
+        <img src="icons/projects.png" alt="Projects">
+        <span>Projects</span>
+      </div>
+      <div class="icon" onclick="openWindow('achievementsWindow')">
+        <img src="icons/achievements.png" alt="Award">
+        <span>Achievements</span>
+      </div>
+      <div class="icon" onclick="openWindow('blogWindow')">
+        <img src="icons/blog.png" alt="Blog">
+        <span>Blog</span>
+      </div>
+      
+    </div>
+    <div class="icon-column">
+      
+      
+    </div>
+  </div>
+    
+    
+    
+    <!-- Clippy Assistant -->
+    <div id="clippy">
+      <img src="images/clippy.gif" alt="Clippy">
+      <div id="clippy-dialog">
+        <h4>Upcoming Events</h4>
+        <p>I'm always look forward to meeting and working with new people.</p>
+        <ul> 
+          <li>ByteDance Developer Day | 11/21 | San Jose</li>
+          <li>AfroTech Conference | 11/13-11/16 | Houston</li>
+          <li>NeurIPS | 12/9-12/15 | Vancouver</li>
+          <li>NSBE Conference | 3/5-3/9 | Chicago</li>
+          <li>CVPR | 6/10-6/17 | Seattle</li>
+          <li>ICML | 7/11-7/19 | Vancouver</li>
+          
+        </ul>
+
+      
+    
+
+        <button onclick="closeClippy()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pop-up Windows -->
+  <!-- Welcome Window -->
+  <div id="welcomeWindow" class="window">
+    <div class="window-header">
+      <span>Welcome</span>
+      <button onclick="closeWindow('welcomeWindow')">X</button>
+    </div>
+    <div class="window-content">
+      <div class="scrollable-content">
+        <h2>Welcome, my name is Anna!</h2>
+        <p>
+          This is a space where I share my authentic self—my achievements, fears, failures, aspirations, thoughts, and everything in between. My goal is that as you explore this page, you'll not only get to know me better but also find something that inspires you to reach out via DM or email to connect.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- About Me Window -->
+  <div id="aboutWindow" class="window">
+    <div class="window-header">
+      <span>About Me</span>
+      <button onclick="closeWindow('aboutWindow')">X</button>
+    </div>
+    <div class="window-content">
+      <div class="scrollable-content">
+        <!-- Your About Me content here -->
+        <h2>Welcome, my name is Anna!</h2>
+        <p> When it comes to my day job I love all things data and machine learning, but on the weekends I enjoy exploring HCI and the more creative side of technology. I have a solid foundation in machine learning and data engineering from the University of Michigan, I have navigated roles as diverse as Design Engineer, Trading Analyst, and XR Dev and Lab Manager. My research work spans from analyzing carbon emissions in underdeveloped countries to studying the impact of deep learning in computational finance and exoplanet characterization. </p>
+        <p>Throughout 2023, I travelled across the country every two weeks to participate in hackathons. These hackathons were not just competitions; they were my classroom, keeping me abreast of cutting-edge tools, technologies, and opportunities in tech.</p>
+        <p> I've set my sights on upskilling and earning better credentials in 2024, aiming to enhance my credibility and create a solid foundation for turning ambitious plans into successful outcomes. Whether you're a fellow tech enthusiast, potential collaborator, or just passing through, I'm glad you're here. Let's connect and explore how we can make a difference, together.</p>
+        <h4>Current Major Projects</h4>
+        <h5>Gralx - multi-modal data mask that preserves context </h5>
+        <p>Gralx is an open-source project that preserves vital contextual information in multi-modal training datasets while anonymizing personally identifiable information (PII) through pseudonymization with synthetic data. Traditional data masking often removes crucial context—like race, gender, age, and emotions—essential for training accurate and unbiased AI models. Gralx allows users to upload multimedia data and specify which contexts to retain. It then generates synthetic data that maintains these important attributes but replaces sensitive identifiers. By integrating advanced models for dense video captioning, audio transcription, text-to-image generation, and image-to-video animation, Gralx creates a pipeline that produces PII-compliant datasets ready for machine learning without sacrificing essential context.</p>
+        <h5>Drolg - AI party DJ by processing video feed in real-time </h5>
+        <p>Drolg is a project that helps DJs choose the perfect music for their audience by analyzing crowd movements and reactions using computer vision. By processing live video feeds, the system interprets the crowd's energy and vibe—assessing factors like movement and pose—and selects songs from Spotify that match these dynamics. This ensures that the music resonates with the audience's mood in real time, enhancing their overall experience and keeping the energy high on the dance floor.</p>
+       
+      </div>
+    </div>
+  </div>
+      
+
+    <!-- Upcoming Competitions Window -->
+    <div id="competitionWindow" class="window">
+      <div class="window-header">
+        <span>Upcoming Competition</span>
+        <button onclick="closeWindow('competitionWindow')">X</button>
+      </div>
+      <div class="window-content">
+        <div class="scrollable-content">
+          <li>
+            <a href="https://www.facebook.com/codingcompetitions/hacker-cup" target="_blank">Meta HackerCup @ NeurIPS</a> | 10/5/24
+          </li>
+          <li>
+            <a href="https://www.facebook.com/codingcompetitions/hacker-cup" target="_blank">AI Tinkerers Humans-in-the-Loop Agents</a> | 10/12/24 - 10/18/24
+          </li>
+          <li>
+            <a href="https://www.llmagentsafetycomp24.com/" target="_blank">CLAS The LLM and Agent Safety Competition @ NeurIPS</a> | 10/18/24
+          </li>
+          <li>
+            <a href="https://www.kaggle.com/competitions/ariel-data-challenge-2024" target="_blank">Intel Student Ambassador Fall Hackathon</a> | 10/17/24 - 10/27/24
+          </li>
+          <li>
+            <a href="https://www.kaggle.com/competitions/ariel-data-challenge-2024" target="_blank">Intel Student Ambassador Fall Hackathon</a> | 10/17/24 - 10/27/24
+          </li>
+          <li>
+            <a href="https://www.cooperativeai.com/contests/concordia-2024" target="_blank">The Concordia Contest @ NeurIPS</a> | 10/31/24
+          </li>
+          <li>
+            <a href="https://www.kaggle.com/competitions/ariel-data-challenge-2024" target="_blank">NeurIPS Ariel Data Challenge</a> | 10/31/24
+          </li>
+          <li>
+            <a href="https://erasinginvisible.github.io/" target="_blank">Competition Erasing the Invisible @ NeurIPS</a> | 11/5/24
+          </li>
+          <li>
+            <a href="https://microsoftfabric.devpost.com/?ref_feature=challenge&ref_medium=your-open-hackathons&ref_content=Submissions+open" target="_blank">Microsoft Fabric and AI Learning Hackathon</a> | 11/12/24
+          </li>
+          <li>
+            <a href="https://googlechromeai.devpost.com/?ref_feature=challenge&ref_medium=your-open-hackathons&ref_content=Submissions+open" target="_blank">Google Chrome Built-in AI Challenge</a> | 12/3/24
+          </li>
+          <li>
+            <a href="https://www.kaggle.com/competitions/gemma-language-tuning" target="_blank">Google Unlock Global Communication with Gemma</a> | 1/14/25
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ <!-- Projects Window -->
+ <div id="projectsWindow" class="window">
+  <div class="window-header">
+    <span>Projects</span>
+    <button onclick="closeWindow('projectsWindow')">X</button>
+  </div>
+  <div class="window-content">
+    <div class="file-explorer">
+      <div class="file-list">
+        <div class="file-item" onclick="showProjectDetails('aidj')">
+          <img src="icons/aidj.png" alt="File">
+          <span>AIDJ</span>
+        </div>
+        <div class="file-item" onclick="showProjectDetails('datamask')">
+          <img src="icons/datamask.png" alt="File">
+          <span>DataMask</span>
+        </div>
+        <div class="file-item" onclick="showProjectDetails('nevalone')">
+          <img src="icons/navalone.png" alt="File">
+          <span>NevAlone</span>
+        </div>
+        <div class="file-item" onclick="showProjectDetails('paperping')">
+          <img src="icons/paperping.png" alt="File">
+          <span>PaperPing</span>
+        </div>
+      </div>
+      <div class="project-details">
+        <h3 id="projectName"></h3>
+        <p id="projectDescription"></p>
+        <a id="projectLink" href="" target="_blank">View on Devpost</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Blog Window -->
+  <div id="blogWindow" class="window">
+    <div class="window-header">
+      <span>Blog Posts</span>
+      <button onclick="closeWindow('blogWindow')">X</button>
+    </div>
+    <div class="window-content">
+      <!-- List of Blog Posts -->
+      <h3>Ghost Fighting, Imposter Syndrome, and Cuddly Nephews: My Weekend at HackMIT</h3>
+      <p>This past weekend, I flew on to Boston for HackMIT, competing against 215 other totally cracked teams in a 24-hour caffeine-fueled showdown to turn our wildest ideas into reality.
+      </p>
+      <a href="https://sycorpia.substack.com/p/ghost-fighting-imposter-syndrome" target="_blank">Read More</a>
+    
+      <h3>Best Tutorials + Resources to Build from Scratch, Not Copying Code</h3>
+      <p>Built for programmers who learn by doing, not watching or reading. Tutorials cover key skill sets in computer vision, ML + AI, and data engineering.</p>
+      <a href="https://sycorpia.substack.com/p/best-tutorials-resources-to-build" target="_blank">Read More</a>
+    </div>
+  </div>
+
+<!-- CV Window -->
+<div id="cvWindow" class="window wide-window">
+  <div class="window-header">
+    <span>My CV</span>
+    <button onclick="closeWindow('cvWindow')">X</button>
+  </div>
+  <div class="window-content">
+    <button id="download-cv" onclick="downloadCV()" title="Download CV">
+      <img src="icons/pdf.png" alt="Download CV">
+    </button>
+    <div class="scrollable-content">
+      <div class="cv-content">
+        <h1>Anna's Resume</h1>
+        
+        <div>
+          <!-- Education Section -->
+          <section>
+            <h2>EDUCATION</h2>
+            <div class="education-item">
+              <h3>University of Michigan, Ann Arbor</h3>
+              <p class="school-date"><strong>May 2025</strong></p>
+              <p><strong>Bachelor of Engineering in Data Science, Minor in Business</strong></p>
+              
+              <p>Coursework: Data Structures & Algorithms, Probability & Statistics for Engineers, Machine Learning, Numerical Analysis, Integrated Product Development</p>
+            </div>
+          </section>
+
+          <!-- Skills Section -->
+          <section>
+            <h2>SKILLS</h2>
+            <ul >
+              <li><strong>Languages:</strong> C++, Python, R, SQL (SQLite, PostgreSQL), UNIX</li>
+              <li><strong>ML & AI:</strong> TensorFlow, PyTorch, HF Transformers, vLLM, Whisper, Tacotron2</li>
+              <li><strong>Big Data:</strong> Pandas, NumPy, SciPy, Apache Kafka, Spark, Airflow</li>
+              <li><strong>Cloud & DevOps:</strong> AWS, Runpod, Model Deployment (Flask, Docker)</li>
+            </ul>
+          </section>
+
+          <!-- Work Experience Section -->
+          <section>
+            <h2>WORK EXPERIENCE</h2>
+            <div class="job">
+              <h3>Intel</h3>
+              <p class="job-title">AI Ambassador</p>
+              <p class="job-duration">Oct 2024 - Present</p>
+              
+              <ul>
+                <li>Developed a real-time AI DJ system that analyzes live video feeds to assess crowd energy, danceability, and tempo using pose estimation and vision models.</li>
+                <li>Modified OpenVINO’s pre-trained video-to-text model to output key musical metrics for Spotify’s recommendation system.</li>
+                <li>Integrated OpenVINO for video processing, MongoDB for song retrieval, and Spotify’s API for dynamic track playback.</li>
+                <li>Engineered a pipeline to process live video streams and translate behavioral metrics into actionable music selections in real-time.</li>
+                <li>Enhanced model robustness by integrating multiple encoders for challenging environments.</li>
+              </ul>
+            </div>
+            
+            <div class="job">
+              <h3>ByteDance</h3>
+              <p class="job-title">Innovator Fellow</p>
+              <p class="job-duration">May 2024 - Present</p>
+              <ul>
+                <li>Led the deployment of a multimodal data masking system for processing text, images, audio, and video for comprehensive PII identification and replacement.</li>
+                <li>Optimized video processing performance using parallel processing and distributed computing via the Babit Multimedia Framework.</li>
+                <li>Deployed a self-hosted, fine-tuned open-source LLM onto the cloud.</li>
+                <li>Improved accuracy in facial recognition and object detection within video frames by 27% through advanced computer vision algorithms.</li>
+                <li>Implemented sophisticated audio processing techniques for PII masking, including voice modulation and speech synthesis.</li>
+                <li>Developed customizable PII detection rules and engineered secure data handling protocols to align with GDPR and CCPA standards.</li>
+                <li>Launched the full-stack web application and API into production.</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>Emerging Technologies Group</h3>
+              <p class="job-title">XR Developer and Lab Manager</p>
+              <p class="job-duration">Oct 2022 - Present</p>
+             
+              <ul>
+                <li>Trained and mentored two new hires, significantly boosting lab productivity and accommodating a surge in demand for XR resources.</li>
+                <li>Taught faculty and PhD students to leverage Motion Capture technology, resulting in higher-quality research data and substantial time savings.</li>
+                <li>Managed and maintained the lab's XR systems and equipment, implementing troubleshooting measures that reduced technical issues.</li>
+                <li>Collaborated with interdisciplinary teams across academic departments to conceptualize, design, and deploy VR games and simulations.</li>
+                <li>Developed and implemented best practices for XR project development, including planning, execution, and evaluation.</li>
+                <li>Contributed to positioning the lab as a national leader in academic XR technology by hosting educators from universities across the country.</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>Strategic Reasoning Group</h3>
+              <p class="job-title">Research Assistant</p>
+              <p class="job-duration">Sept 2022 - Aug 2023</p>
+              
+              <ul>
+                <li>Redesigned and modernized a trading market simulator used to test trading strategies, transitioning it from Java to Python, improving efficiency and functionality.</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>Digital Currency Group</h3>
+              <p class="job-title">Quantitative Trading Intern</p>
+              <p class="job-duration">June 2022 - Aug 2022</p>
+              
+              <ul>
+                <li>Built three parameter estimation models: MoM and MLE fitted to a variance-gamma distribution, and a Bayesian parameter estimation model.</li>
+                <li>Remodeled Bühler’s Deep Hedging framework using Imaki’s no-transaction band network to identify optimal hedging strategies in incomplete markets using neural network architecture.</li>
+                <li>Built a gamma volatility backtesting model using the Ornstein-Uhlenbeck model under risk neutral measures to capture realized volatility and predict future volatility.</li>
+                <li>Optimized portfolio performance by comparing four different models using Sharpe’s ratio.</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>ASSET Lab</h3>
+              <p class="job-title">Research Assistant</p>
+              <p class="job-duration">June 2020 - Feb 2022</p>
+              
+              <ul>
+                <li>Analyzed large emissions datasets and built emission comparison models to compare the performance of diesel and solar-powered motorcycles.</li>
+                <li>Co-authored academic publication "Emissions impacts of electrifying motorcycle taxis in Kampala, Uganda".</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>Nexamp</h3>
+              <p class="job-title">Design Engineer Intern</p>
+              <p class="job-duration">Jan 2021 - June 2021</p>
+             
+              <ul>
+                <li>Created and optimized conceptual design layouts and schematics for grid-tied photovoltaic power plants and battery storage systems.</li>
+                <li>Designed 36 AC and DC electrical single-line diagrams for solar power plants using AutoCAD.</li>
+                <li>Performed medium voltage design work in support of utility interconnection and permitting application processes.</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>University of Michigan</h3>
+              <p class="job-title">Instructional Aide</p>
+              <p class="job-duration">June 2018 - Aug 2018</p>
+             
+              <ul>
+                <li>Taught weekly workshops and tutoring sessions for a calculus-based undergraduate course.</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>University of Michigan, Department of Astronomy</h3>
+              <p class="job-title">Research Assistant</p>
+              <p class="job-duration">Sept 2017 - Apr 2018</p>
+              
+              <ul>
+                <li>Engineered a computational model using Python and VPython to process and analyze large-scale datasets for exoplanet property prediction.</li>
+                <li>Collaborated with faculty and graduate students to refine the model, resulting in more accurate predictions of exoplanet characteristics.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Leadership Experience Section -->
+          <section>
+            <h2>LEADERSHIP EXPERIENCE</h2>
+            <div class="leadership-item">
+              <h3>National Society of Black Engineers</h3>
+              <p><strong>President</strong> - Oversaw the professional development of over 120 engineers and led 9 executive board members, resulting in our chapter being selected as the best in the region.</p>
+              <p><strong>Finance Chair</strong> - Established 21 strategic partnerships with Fortune 500 companies, generating $63k in annual revenue and creating employment opportunities for chapter members.</p>
+            </div>
+            
+            <div class="leadership-item">
+              <h3>B3</h3>
+              <p><strong>President, Co-founder</strong> - Coordinated campus-wide career programs, bringing over 40 high school students from underrepresented communities to the university to learn about academic majors and resources.</p>
+            </div>
+            
+            <div class="leadership-item">
+              <h3>optiMize</h3>
+              <p><strong>Core Team Member</strong> - Co-organized the annual Social Innovation Challenge, managing logistics for over 200 teams and coordinating with 50+ mentors and judges. Led a diversity recruitment initiative that increased participation from underrepresented groups by 40%.</p>
+            </div>
+          </section>
+
+          <!-- Awards and Recognition Section -->
+          <section>
+            <h2>AWARDS AND RECOGNITION</h2>
+            <ul class="awards-list">
+              <li><strong>LocalHost Fellow</strong>, Present</li>
+              <li><strong>Founder University</strong>, 2023</li>
+              <li><strong>Willie Hobbs Moore: Aspire - Advance, Achieve</strong>, 2019</li>
+              <li><strong>MLK Student Spirit Award</strong>, 2019</li>
+              <li><strong>Leadership Engagement Scholar</strong>, 2019</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Music Window -->
+  <div id="musicWindow" class="window">
+    <div class="window-header">
+      <span>Music Visualizer</span>
+      <button onclick="closeWindow('musicWindow')">X</button>
+    </div>
+    <div class="window-content">
+      
+    </div>
+  </div>
+
+<!-- Achievements Window -->
+<div id="achievementsWindow" class="window">
+  <div class="window-header">
+    <span>Achievements</span>
+    <button onclick="closeWindow('achievementsWindow')">X</button>
+  </div>
+  <div class="window-content">
+        <h3>Competitions</h3>
+        <ul> 
+          <li>MHacks 17, Intel - 1st Place Best Use of Intel AI </li>
+          <li>HackMIT 2024, Most Marvel-ous </li>
+          <li>MHacks x Google, 4th Place </li>
+          <li>HackHarvard, First-time Hack</li>
+          <li>PennApps, Wolfram Award </li>
+          <li>optiMize Social Innovation Challenge, Winner</li>
+        </ul>
+        <h3>Fellowships and Programs</h3>
+        <ul> 
+          <li>ByteDance, Innovator Fellow </li>
+          <li>ByteDance, Innovator Fellow </li>
+          <li>LocalHost, Fellow</li>
+          <li>Founder University by LAUNCH, Cohort 6</li>
+          <li>optiMize, Summer Fellow </li>
+        </ul>
+        <h3>Awards and Recognition</h3>
+        <ul> 
+          <li>Willie Hobbs Moore: Aspire - Advance, Achieve</li>
+          <li>MLK Student Spirit Award</li>
+          <li>Leadership Engagement Scholar</li>
+        </ul>
+  </div>
+</div>
+    
+
+
+<!-- Favorites Window -->
+<div id="favoritesWindow" class="window">
+  <div class="window-header">
+    <span>My Favorites</span>
+    <button onclick="closeWindow('favoritesWindow')">X</button>
+  </div>
+  <div class="window-content">
+    <h4>Books</h4>
+    <p>Glass Castle</p>
+    <h4>Visual Artist</h4>
+    <p>Lauren McCathy</p>
+    <h4>Musicians</h4>
+    <h4>Things I Love</h4>
+    
+    <h4>Funfacts</h4>
+        
+  </div>
+</div>
+    
+<!-- Bucketlist Window -->
+<div id="bucketlistWindow" class="window">
+  <div class="window-header">
+    <span>Bucketlist</span>
+    <button onclick="closeWindow('bucketlistWindow')">X</button>
+  </div>
+  <div class="window-content">
+    <div class="scrollable-content">
+      
+      <h3>Professional Goals</h3>
+      <ul class="bucketlist-checklist">
+        <li><input type="checkbox" id="google"><label for="google"> Google</label></li>
+        <li><input type="checkbox" id="neurips"><label for="neurips"> NeurIPS, attend, paper accepted</label></li>
+        <li><input type="checkbox" id="masters"><label for="masters"> Masters</label></li>
+        <li><input type="checkbox" id="media-lab"><label for="media-lab"> Media Lab @ MIT</label></li>
+        <li><input type="checkbox" id="quant"><label for="quant"> Quant</label></li>
+        <li><input type="checkbox" id="manufacturing"><label for="manufacturing"> Manufacturing</label></li>
+        <li><input type="checkbox" id="fluent-chinese"><label for="fluent-chinese"> Fluent Chinese</label></li>
+        <li><input type="checkbox" id="archeologist"><label for="archeologist"> Archeologist</label></li>
+      </ul>
+      
+      
+      <h3>Personal Health Goals</h3>
+      <ul class="bucketlist-checklist">
+        <li><input type="checkbox" id="lose-40-lbs"><label for="lose-40-lbs"> Lose 40 lbs</label></li><li><input type="checkbox" id="lose-120-lbs"><label for="lose-120-lbs"> Lose 120 lbs</label></li>
+        <li><input type="checkbox" id="lose-120-lbs"><label for="lose-120-lbs"> Lose 120 lbs</label></li>
+        <li><input type="checkbox" id="run-5k"><label for="run-5k"> Run 5K</label></li>
+      </ul>
+      
+      <h3>Adventure & Travel Goals</h3>
+      <ul class="bucketlist-checklist">
+        <li><input type="checkbox" id="hike-volcano"><label for="hike-volcano"> Hike Volcano</label></li>
+        <li><input type="checkbox" id="skydiving"><label for="skydiving"> Skydiving License</label></li>
+        <li><input type="checkbox" id="bass-canyon"><label for="bass-canyon"> Bass Canyon</label></li>
+        <li><input type="checkbox" id="burning-man"><label for="burning-man"> Burning Man</label></li>
+        <li><input type="checkbox" id="turkey"><label for="turkey"> Turkey</label></li>
+        <li><input type="checkbox" id="canyonlands"><label for="canyonlands"> Canyonlands</label></li>
+      </ul>
+      
+      <h3>Creative & Artistic Goals</h3>
+      <ul class="bucketlist-checklist">
+        <li><input type="checkbox" id="make-art"><label for="make-art"> Make Art Creative Technology Code</label></li>
+        <li><input type="checkbox" id="artist-collective"><label for="artist-collective"> Artist Collective</label></li>
+      </ul>
+      
+      <h3>Financial Goals</h3>
+      <ul class="bucketlist-checklist">
+        <li><input type="checkbox" id="invest-markets"><label for="invest-markets"> Invest in Emerging Markets</label></li>
+        <li><input type="checkbox" id="sell-company"><label for="sell-company"> Sell Company and "Retire"</label></li>
+      </ul>
+      
+      <h3>Social Goals</h3>
+      <ul class="bucketlist-checklist">
+        <li><input type="checkbox" id="social-experiments"><label for="social-experiments"> Social Experiments</label></li>
+        <li><input type="checkbox" id="social-club"><label for="social-club"> Social Club</label></li>
+      </ul>
+      
+      <h3>Lifestyle Goals</h3>
+      <ul class="bucketlist-checklist">
+        <li><input type="checkbox" id="dream-farm"><label for="dream-farm"> My Dream Farm</label></li>
+      </ul>
+      
+    </div>
+  </div>
+</div>
+
+
+  <!-- Let's Connect Window (formerly Wi-Fi Window) -->
+  <div id="connectWindow" class="window">
+    <div class="window-header">
+      <span>🙂‍↕️👉👈 sooo you seem cool</span>
+      <button onclick="closeWindow('connectWindow')">X</button>
+    </div>
+    <div class="window-content">
+      <!-- Social Media and Contact Information -->
+      <p>want to meetup at an event or connect online maybe?</p>
+      <ul>
+        
+        <li><a href="https://twitter.com/sycorpia" target="_blank">Twitter</a></li>
+        <li><a href="https://www.instagram.com/annabuildshit" target="_blank">Instagram</a></li>
+        <li><a href="https://github.com/tesims" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/anna-sims-b73233257" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:meetinganna@outlook.com">meetinganna@outlook.com</a></li>
+        <!-- Add more social media links as needed -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Audio Window -->
+  <div id="audioWindow" class="window">
+    <div class="window-header">
+      <span>Audio Settings</span>
+      <button onclick="closeWindow('audioWindow')">X</button>
+    </div>
+    <div class="window-content">
+      <p>Adjust your volume:</p>
+      <input type="range" min="0" max="100" value="50" onchange="adjustVolume(this.value)">
+    </div>
+  </div>
+
+  <!-- Settings Window -->
+  <div id="settingsWindow" class="window">
+    <div class="window-header">
+      <span>Settings</span>
+      <button onclick="closeWindow('settingsWindow')">X</button>
+    </div>
+    <div class="window-content">
+      <p>Change Desktop Background:</p>
+      <button onclick="changeBackground('background1.png')">Background 1</button>
+      <button onclick="changeBackground('background2.png')">Background 2</button>
+      <button onclick="changeBackground('background3.png')">Background 3</button>
+      <button onclick="changeBackground('background4.png')">Background 4</button>
+    </div>
+  </div>
+
+  <!-- Taskbar -->
+  <div id="taskbar">
+    <div id="start-button" onclick="toggleStartMenu()">
+      <img src="icons/start.png" alt="Start">
+    </div>
+    <div id="taskbar-windows">
+      <!-- Open window tabs will appear here -->
+    </div>
+    <div id="taskbar-icons">
+      <div class="taskbar-icon" onclick="openWindow('connectWindow')">
+        <img src="icons/connect.png" alt="Connect">
+      </div>
+      <div class="taskbar-icon" onclick="openWindow('audioWindow')">
+        <img src="icons/audio.png" alt="Audio">
+      </div>
+      <div class="taskbar-icon" onclick="openWindow('settingsWindow')">
+        <img src="icons/settings.png" alt="Settings">
+      </div>
+    </div>
+    <div id="taskbar-clock">
+      <!-- Clock Display -->
+      <span id="clock"></span>
+    </div>
+  </div>
+
+  <!-- Start Menu -->
+  <div id="start-menu">
+    <ul>
+      
+      <li onclick="openWindow('competitionWindow')">Upcoming Competitions</li>
+      
+      
+      
+    </ul>
+  </div>
+
+  <!-- Mobile Version -->
+  <div id="mobile">
+    <nav>
+      <ul>
+        <li onclick="showMobileSection('aboutMobile')">About Me</li>
+        <li onclick="showMobileSection('projectsMobile')">Projects</li>
+        <li onclick="showMobileSection('blogMobile')">Blog</li>
+        <li onclick="showMobileSection('cvMobile')">My CV</li>
+        <li onclick="showMobileSection('musicMobile')">Music</li>
+        <li onclick="showMobileSection('connectMobile')">Let's Connect</li>
+        <li onclick="showMobileSection('achievementsMobile')">Achievements</li>
+      </ul>
+    </nav>
+    <div id="mobileContent">
+      <!-- Mobile sections will be displayed here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="audioVisualizer.js"></script>
+</body>
+</html>
